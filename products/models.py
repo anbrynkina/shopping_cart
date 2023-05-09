@@ -22,5 +22,6 @@ class Book(models.Model):
     quantity = models.PositiveIntegerField(default=0)
     category = models.ForeignKey(BookCategory, on_delete=models.PROTECT)
 
+    # to return title name + its category name (will be better to monitor in admin)
     def __str__(self):
-        return self.title
+        return f'{self.title} | {self.category.name}'
