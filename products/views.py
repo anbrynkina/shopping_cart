@@ -5,20 +5,34 @@ from django.shortcuts import render
 # created a controller to show the page
 def index(request):
     context = {
-        'title': 'Store Homepage'
+        'title': 'Homepage'
     }
     return render(request, 'products/index.html', context)
 
 def products(request):
     context = {
-        'title': 'Store - Products Catalogue'
+        'title': 'Book Catalogue'
     }
     return render(request, 'products/products.html', context)
+
+# maybe its better to add it via ORM?
+def books(request):
+    context = {
+        'products': [
+            {'name': 'Klara and the Sun', 'price': 20},
+            {'name': 'The Four Winds', 'price': 18},
+            {'name': 'adidas Original Black Monogram Hoodies', 'price': 80},
+            {'name': 'adidas Original Black Monogram Hoodies', 'price': 80},
+            {'name': 'adidas Original Black Monogram Hoodies', 'price': 80},
+            {'name': 'adidas Original Black Monogram Hoodies', 'price': 80},
+        ]
+
+    }
 
 # to test how dynamic content works, creating test function
 def test_context(request):
     context = {
-        'title': 'store',
+        'title': 'book store',
         'header': 'Welcome to the store!',
         'username': 'Anna',
         'products': [
