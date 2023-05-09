@@ -6,6 +6,10 @@ class BookCategory(models.Model):
     name = models.CharField(max_length=100, unique=True)
     description = models.TextField(blank=True)
 
+    # to return object names
+    def __str__(self):
+        return self.name
+
 class Book(models.Model):
     title = models.CharField(max_length=200)
     author = models.CharField(max_length=200)
@@ -18,5 +22,5 @@ class Book(models.Model):
     quantity = models.PositiveIntegerField(default=0)
     category = models.ForeignKey(BookCategory, on_delete=models.PROTECT)
 
-    # def __str__(self):
-    #     return self.title
+    def __str__(self):
+        return self.title
