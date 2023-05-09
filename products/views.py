@@ -8,3 +8,12 @@ def index(request):
 
 def products(request):
     return render(request, 'products/products.html')
+
+# to test how dynamic content works, creating test function
+def test_context(request):
+    context = {
+        'title': 'Store',
+        'header': 'Welcome to the store!',
+        'username': 'Anna',
+    }
+    return render(request, 'products/test_context.html', context)
