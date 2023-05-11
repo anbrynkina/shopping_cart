@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from products.models import BookCategory, Book
+
 
 # Create your views here.
 
@@ -9,40 +11,25 @@ def index(request):
     }
     return render(request, 'products/index.html', context)
 
+
 def products(request):
     context = {
-        'title': 'Book Catalogue'
+        'title': 'Book Catalogue',
+        'categories': BookCategory.objects.all(),
+        'products': Book.objects.all(),
     }
     return render(request, 'products/products.html', context)
 
 # maybe its better to add it via ORM?
-def books(request):
-    context = {
-        'products': [
-            {'name': 'Klara and the Sun', 'price': 20},
-            {'name': 'The Four Winds', 'price': 18},
-            {'name': 'adidas Original Black Monogram Hoodies', 'price': 80},
-            {'name': 'adidas Original Black Monogram Hoodies', 'price': 80},
-            {'name': 'adidas Original Black Monogram Hoodies', 'price': 80},
-            {'name': 'adidas Original Black Monogram Hoodies', 'price': 80},
-        ]
-
-    }
-
-# to test how dynamic content works, creating test function
-def test_context(request):
-    context = {
-        'title': 'book store',
-        'header': 'Welcome to the store!',
-        'username': 'Anna',
-        'products': [
-            {'name': 'adidas Original Black Monogram Hoodies', 'price': 80},
-            {'name': 'The North Face blue jacket', 'price': 100},
-            {'name': 'ASOS DESIGN oversize sports top in brown', 'price': 59.9},
-        ],
-        # 'promotion': True,
-        'products_of_promotion': [
-            {'name': 'Nike Black Heritage Backpack', 'price': 69},
-        ]
-    }
-    return render(request, 'products/test_context.html', context)
+# def books(request):
+#     context = {
+#         'products': [
+#             {'name': 'Klara and the Sun', 'price': 20},
+#             {'name': 'The Four Winds', 'price': 18},
+#             {'name': 'adidas Original Black Monogram Hoodies', 'price': 80},
+#             {'name': 'adidas Original Black Monogram Hoodies', 'price': 80},
+#             {'name': 'adidas Original Black Monogram Hoodies', 'price': 80},
+#             {'name': 'adidas Original Black Monogram Hoodies', 'price': 80},
+#         ]
+#
+#     }

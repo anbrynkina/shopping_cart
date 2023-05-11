@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 
 class BookCategory(models.Model):
@@ -9,6 +10,11 @@ class BookCategory(models.Model):
     # to return object names
     def __str__(self):
         return self.name
+
+    # to show 'Category' in plural correctly
+    class Meta:
+        verbose_name_plural = 'Product Categories'
+
 
 class Book(models.Model):
     title = models.CharField(max_length=200)
