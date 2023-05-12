@@ -1,0 +1,86 @@
+[
+  {
+    "model": "products.book",
+    "pk": 1,
+    "fields": {
+      "title": "The Last Thing He Told Me",
+      "author": "Laura Dave",
+      "price": "17.00",
+      "published_date": "2021-05-04",
+      "image": "products_images/thelastthinghetoldme.jpeg",
+      "short_description": "This book is a gripping and emotional thriller about a wife who embarks on a dangerous journey to uncover the truth behind her husband's disappearance.",
+      "quantity": 16,
+      "category": 1
+    }
+  },
+  {
+    "model": "products.book",
+    "pk": 2,
+    "fields": {
+      "title": "Klara and the Sun",
+      "author": "Kazuo Ishiguro",
+      "price": "20.00",
+      "published_date": "2021-03-02",
+      "image": "products_images/klaraandthesun.jpeg",
+      "short_description": "In this book an Artificial Friend named Klara forms a special bond with a teenage girl while exploring the intricacies of human emotions and the world around her.",
+      "quantity": 15,
+      "category": 1
+    }
+  },
+  {
+    "model": "products.book",
+    "pk": 3,
+    "fields": {
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "price": "10.00",
+      "published_date": "1988-02-11",
+      "image": "products_images/thealchemist.jpeg",
+      "short_description": "A shepherd boy follows his dreams, learning the language of the universe and discovering his true destiny.",
+      "quantity": 8,
+      "category": 1
+    }
+  },
+  {
+    "model": "products.book",
+    "pk": 4,
+    "fields": {
+      "title": "Mexican Gothic",
+      "author": "Silvia Moreno-Garcia",
+      "price": "17.00",
+      "published_date": "2020-06-30",
+      "image": "products_images/mexicangothic.jpeg",
+      "short_description": "A young woman travels to a creepy, isolated house in the Mexican countryside to save her cousin from a dark fate.",
+      "quantity": 3,
+      "category": 3
+    }
+  },
+  {
+    "model": "products.book",
+    "pk": 5,
+    "fields": {
+      "title": "The Southern Book Club's Guide to Slaying Vampires",
+      "author": "Grady Hendrix",
+      "price": "14.00",
+      "published_date": "2020-04-07",
+      "image": "products_images/southernbookclubsguide.jpeg",
+      "short_description": "A book club of Southern housewives takes on a charming but sinister stranger who may be a vampire.",
+      "quantity": 8,
+      "category": 3
+    }
+  },
+  {
+    "model": "products.book",
+    "pk": 6,
+    "fields": {
+      "title": "The Vanishing Half",
+      "author": "Brit Bennett",
+      "price": "16.00",
+      "published_date": "2020-06-02",
+      "image": "products_images/thevanishing.jpeg",
+      "short_description": "Twin sisters grow up in a black community in the 1950s, but as adults, one passes as white while the other lives as a black woman.",
+      "quantity": 3,
+      "category": 2
+    }
+  }
+]

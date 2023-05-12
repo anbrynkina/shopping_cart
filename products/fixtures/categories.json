@@ -1,0 +1,26 @@
+[
+  {
+    "model": "products.bookcategory",
+    "pk": 1,
+    "fields": {
+      "name": "Bestsellers",
+      "description": "Books that everyone is talking about and cannot put down"
+    }
+  },
+  {
+    "model": "products.bookcategory",
+    "pk": 2,
+    "fields": {
+      "name": "Fiction",
+      "description": ""
+    }
+  },
+  {
+    "model": "products.bookcategory",
+    "pk": 3,
+    "fields": {
+      "name": "Horror",
+      "description": ""
+    }
+  }
+]
